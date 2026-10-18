@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang web cá nhân của Ngọc Anh Nguyễn</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Skip link: chỉ hiển thị khi focus -->
+  <a class="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
+
+  <header class="site-header">
+    <h1>Ngọc Anh Nguyễn</h1>
+    <p class="tagline">Sinh viên yêu thích công nghệ, thiết kế web và học tập mỗi ngày.</p>
+
+    <nav aria-label="Điều hướng chính">
+      <ul class="main-nav">
+        <li><a href="#profile">Thông tin cá nhân</a></li>
+        <li><a href="#grades">Bảng điểm</a></li>
+        <li><a href="#register">Đăng ký</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Phần 1: Thông tin cá nhân -->
+    <section id="profile" class="profile-section">
+      <h2>Thông tin cá nhân</h2>
+
+      <article class="profile">
+        <img
+          id="avatar"
+          src="https://i.pravatar.cc/300?img=12"
+          alt="Ảnh đại diện của Karixi Leon">
+
+        <div class="profile-info">
+          <h3>Karixi Leon</h3>
+          <p><strong>Ngành học:</strong> Công nghệ thông tin</p>
+          <p><strong>Trường:</strong> Đại học Hải Phòng</p>
+          <p><strong>Email:</strong> <a href="mailto:Ngọc Anh Nguyễn@example.com">Ngọc Anh Nguyễn@example.com</a></p>
+
+          <h4>Sở thích</h4>
+          <ul class="hobby-list">
+            <li>Lập trình website</li>
+            <li>Chụp ảnh và du lịch</li>
+            <li>Đọc sách công nghệ</li>
+            <li>Chơi thể thao</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- Phần 2: Bảng điểm -->
+    <section id="grades" class="grades-section">
+      <h2>Bảng điểm sinh viên</h2>
+
+      <div class="table-wrapper">
+        <span class="table-label">BẢNG ĐIỂM</span>
+
+        <table>
+          <caption class="visually-hidden">Bảng điểm học kỳ của Ngọc Anh Nguyễn</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">STT</th>
+              <th scope="col">Môn học</th>
+              <th scope="col">Số tín chỉ</th>
+              <th scope="col">Điểm</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Nhập môn lập trình</td>
+              <td>3</td>
+              <td>8.5</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>HTML và CSS</td>
+              <td>3</td>
+              <td>9.0</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Toán rời rạc</td>
+              <td>3</td>
+              <td>7.5</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Cơ sở dữ liệu</td>
+              <td>3</td>
+              <td>8.0</td>
+            </tr>
+            <tr class="average-row">
+              <td colspan="3">Điểm trung bình</td>
+              <td>8.25</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Phần 3: Form đăng ký -->
+    <section id="register" class="register-section">
+      <h2>Form đăng ký sinh viên</h2>
+
+      <form class="register-form" action="#" method="post">
+        <span class="form-label">ĐĂNG KÝ MỚI</span>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Số điện thoại</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <fieldset class="form-field">
+          <legend>Giới tính</legend>
+
+          <div class="choice-group">
+            <label>
+              <input type="radio" name="gender" value="male"> Nam
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female"> Nữ
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other"> Khác
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-field">
+          <legend>Chọn khóa học</legend>
+
+          <div class="choice-group">
+            <label>
+              <input type="checkbox" name="course" value="html-css"> HTML & CSS
+            </label>
+            <label>
+              <input type="checkbox" name="course" value="javascript"> JavaScript
+            </label>
+            <label>
+              <input type="checkbox" name="course" value="python"> Python
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Đăng ký</button>
+          <button type="reset" class="btn secondary">Nhập lại</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
