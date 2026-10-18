@@ -1,0 +1,385 @@
+/* ===== External CSS: giao diện chung ===== */
+
+/* Element selector */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  color: #222;
+  background-color: lightsteelblue;
+  margin: 0;
+  padding: 0;
+}
+
+/* Group selector */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  text-align: center;
+  color: navy;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 2rem auto 1rem;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: #003366;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ===== Header và navigation ===== */
+
+.site-header {
+  background-image: linear-gradient(135deg, #003366, #0066cc);
+  color: white;
+  padding: 2.5rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.5rem auto 1.5rem;
+  max-width: 40rem;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: white;
+  color: #003366;
+}
+
+/* ===== Layout chính dùng CSS Grid ===== */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 70rem;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* ===== Phần 1: Profile card ===== */
+
+.profile-section {
+  background-color: white;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+
+  width: 100%;
+  max-width: 45rem;
+  margin: auto;
+  padding: 1.5rem;
+  border: 2px solid #003366;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f8fbff;
+}
+
+/* ID selector */
+#avatar {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0066cc;
+}
+
+.profile-info {
+  flex: 1 1 18rem;
+}
+
+/* Descendant selector */
+.profile p {
+  margin: 0.35rem 0;
+}
+
+.profile a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.profile a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.hobby-list {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.hobby-list li {
+  padding: 0.35rem 0.5rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.35rem;
+}
+
+.hobby-list li:hover {
+  background-color: rgb(220, 235, 255);
+}
+
+/* ===== Phần 2: Bảng điểm ===== */
+
+.table-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  padding: 2rem 1rem 1rem;
+  background-color: white;
+  border: 2px solid #003366;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table-label {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background-color: #003366;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #99aabb;
+  padding: 0.75rem;
+}
+
+th {
+  background-color: #003366;
+  color: white;
+}
+
+td:nth-child(1),
+td:nth-child(4),
+th:nth-child(1),
+th:nth-child(4) {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eef4ff;
+}
+
+tbody tr:hover {
+  background-color: rgb(255, 240, 200);
+}
+
+.average-row {
+  font-weight: 700;
+  background-color: #ffe9b3;
+}
+
+/* ===== Phần 3: Form đăng ký ===== */
+
+.register-section {
+  display: flex;
+  justify-content: center;
+}
+
+.register-form {
+  position: relative;
+  width: 100%;
+  max-width: 45rem;
+  padding: 2rem 1.5rem 1.5rem;
+  background-color: white;
+  border: 2px solid #0066cc;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-label {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background-color: #0066cc;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-row .form-field {
+  flex: 1 1 15rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #003366;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #8899aa;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff6600;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2);
+}
+
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.choice-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: normal;
+  color: #222;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #004999;
+}
+
+.btn.secondary {
+  background-color: #dddddd;
+  color: #222;
+}
+
+.btn.secondary:hover {
+  background-color: #bbbbbb;
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
